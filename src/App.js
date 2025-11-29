@@ -1,24 +1,52 @@
-import logo from './logo.svg';
-import './App.css';
+import { ConfigProvider, Layout } from "antd";
+import { Routes, Route } from "react-router-dom";
+import "./App.css";
+import ContactSection from "./components/ContactSection";
+import Footer from "./components/Footer";
+import Hero from "./components/Hero";
+import ProjectsSection from "./components/ProjectsSection";
+import SkillsSection from "./components/SkillsSection";
+import Topbar from "./components/Topbar";
+import { projects, skills } from "./content";
+import ArtificialIntelligence from "./pages/ArtificialIntelligence";
+
+const { Content } = Layout;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ConfigProvider
+      theme={{
+        token: {
+          colorPrimary: "#7cb2ff",
+          colorBgContainer: "rgba(255,255,255,0.04)",
+          colorBgBase: "#060911",
+          colorTextBase: "#e8ecf7",
+          borderRadius: 12,
+          fontFamily: "'Space Grotesk', 'Inter', system-ui, -apple-system, sans-serif",
+        },
+      }}
+    >
+      <Layout className="page">
+        <Topbar />
+        <Content>
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <>
+                  <Hero />
+                  <ProjectsSection projects={projects} />
+                  <SkillsSection skills={skills} />
+                  <ContactSection />
+                </>
+              }
+            />
+            <Route path="/ai" element={<ArtificialIntelligence />} />
+          </Routes>
+        </Content>
+        <Footer />
+      </Layout>
+    </ConfigProvider>
   );
 }
 
