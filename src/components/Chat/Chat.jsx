@@ -11,7 +11,7 @@ import "./Chat.css";
 
 function Chat() {
   const [chatHistory, setChatHistory] = useState([
-    { role: "model", text: "Hello! How can I assist you today?" },
+    { role: "model", text: "Hello! Ask me anything about Nick!" },
   ]);
 
   const [showChat, setShowChat] = useState(false);

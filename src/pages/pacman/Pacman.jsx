@@ -9,8 +9,6 @@ const COLS = 21;
 const RADIUS = TILE / 2 - 2;
 const cloneLevel = (lvl) => lvl.map((row) => [...row]);
 
-
-
 // 0 = empty, 1 = wall, 2 = pellet
 const LEVEL = [
   [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],

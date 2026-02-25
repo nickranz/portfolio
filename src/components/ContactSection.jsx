@@ -18,7 +18,7 @@ const ContactSection = () => {
           <Button
             type="primary"
             size="large"
-            href="mailto:nicolasranz@gmail.com"
+            href="mailto:nicolasranz@hotmail.com"
             className="primary-button"
           >
             Email me
