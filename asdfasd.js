@@ -9,6 +9,7 @@ import SkillsSection from "./components/SkillsSection";
 import Topbar from "./components/Topbar";
 import { projects, skills } from "./content";
 import ArtificialIntelligence from "./pages/ArtificialIntelligence";
+import Pacman from "./pages/pacman/Pacman";
 
 const { Content } = Layout;
 
@@ -22,7 +23,8 @@ function App() {
           colorBgBase: "#060911",
           colorTextBase: "#e8ecf7",
           borderRadius: 12,
-          fontFamily: "'Space Grotesk', 'Inter', system-ui, -apple-system, sans-serif",
+          fontFamily:
+            "'Space Grotesk', 'Inter', system-ui, -apple-system, sans-serif",
         },
       }}
     >
@@ -42,6 +44,7 @@ function App() {
               }
             />
             <Route path="/ai" element={<ArtificialIntelligence />} />
+            <Route path="/pacman" element={<Pacman />} />
           </Routes>
         </Content>
         <Footer />

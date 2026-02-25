@@ -6,12 +6,22 @@ const menuItems = [
   { key: "work", label: <a href="/#projects">Work</a> },
   { key: "skills", label: <a href="/#skills">Focus</a> },
   { key: "ai", label: <Link to="/ai">AI</Link> },
+  { key: "pacman", label: <Link to="/pacman">Pac-Man</Link> },
   { key: "contact", label: <a href="/#contact">Contact</a> },
 ];
 
 const Topbar = () => {
   const { pathname, hash } = useLocation();
-  const selectedKey = pathname === "/ai" ? "ai" : hash === "#projects" ? "work" : hash === "#skills" ? "skills" : "home";
+  const selectedKey =
+    pathname === "/ai"
+      ? "ai"
+      : pathname === "/pacman"
+      ? "pacman"
+      : hash === "#projects"
+      ? "work"
+      : hash === "#skills"
+      ? "skills"
+      : "home";
 
   return (
     <header className="topbar">
