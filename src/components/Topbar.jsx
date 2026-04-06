@@ -1,30 +1,30 @@
-import { Button, Menu } from "antd";
 import { Link, useLocation } from "react-router-dom";
-
-const menuItems = [
-  { key: "home", label: <Link to="/">Home</Link> },
-  { key: "work", label: <a href="/#projects">Work</a> },
-  { key: "skills", label: <a href="/#skills">Focus</a> },
-  { key: "ai", label: <Link to="/ai">AI</Link> },
-  { key: "contact", label: <a href="/#contact">Contact</a> },
-];
+import { PERSONAL } from "../constants";
 
 const Topbar = () => {
-  const { pathname, hash } = useLocation();
-  const selectedKey = pathname === "/ai" ? "ai" : hash === "#projects" ? "work" : hash === "#skills" ? "skills" : "home";
+  const { pathname } = useLocation();
+
+  const linkStyle = (path) => ({
+    color: pathname === path ? "var(--on-surface)" : undefined,
+  });
 
   return (
     <header className="topbar">
-      <div className="brand">NR</div>
-      <Menu
-        mode="horizontal"
-        items={menuItems}
-        selectedKeys={[selectedKey]}
-        className="nav-menu"
-      />
-      <Button type="default" href="mailto:nicolasranz@gmail.com" className="ghost-button">
-        Let&apos;s talk
-      </Button>
+      <Link to="/" className="brand">NR</Link>
+
+      <nav className="nav">
+        <Link to="/" style={linkStyle("/")}>Home</Link>
+        <a href="/#skills">Skills</a>
+        {/* <Link to="/ai" style={linkStyle("/ai")}>AI</Link> */}
+        <Link to="/contact" style={linkStyle("/contact")}>Contact</Link>
+        <Link to="/pacman" style={linkStyle("/pacman")}>Pac-Man</Link>
+      </nav>
+
+      <div className="topbar-actions">
+        <a href={`mailto:${PERSONAL.email}`} className="nav-cta">
+          Let&apos;s talk <span className="nav-cta-arrow">↗</span>
+        </a>
+      </div>
     </header>
   );
 };

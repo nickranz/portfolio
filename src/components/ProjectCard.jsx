@@ -1,22 +1,19 @@
-import { Card, Tag, Typography } from "antd";
-
-const { Title, Paragraph, Link } = Typography;
-
-const ProjectCard = ({ title, blurb, stack, link }) => (
-  <Card className="card" bordered>
-    <div className="card-header">
-      <Title level={3}>{title}</Title>
-      <Link href={link}>View</Link>
+const ProjectCard = ({ title, blurb, stack, link, num }) => (
+  <div className="card">
+    <div className="card-meta">
+      {num ? `#0${num} · ` : ""}{stack.join(" · ")}
     </div>
-    <Paragraph className="card-body">{blurb}</Paragraph>
+    <div className="card-header">
+      <h3>{title}</h3>
+      <a href={link} className="text-link">View →</a>
+    </div>
+    <p className="card-body">{blurb}</p>
     <div className="chip-row">
       {stack.map((item) => (
-        <Tag key={item} color="geekblue" className="chip">
-          {item}
-        </Tag>
+        <span key={item} className="chip">{item}</span>
       ))}
     </div>
-  </Card>
+  </div>
 );
 
 export default ProjectCard;

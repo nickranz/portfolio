@@ -1,38 +1,3 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
-// import './App.css'
-
-// function App() {
-//   const [count, setCount] = useState(0)
-
-//   return (
-//     <>
-//       <div>
-//         <a href="https://vite.dev" target="_blank">
-//           <img src={viteLogo} className="logo" alt="Vite logo" />
-//         </a>
-//         <a href="https://react.dev" target="_blank">
-//           <img src={reactLogo} className="logo react" alt="React logo" />
-//         </a>
-//       </div>
-//       <h1>Vite + React</h1>
-//       <div className="card">
-//         <button onClick={() => setCount((count) => count + 1)}>
-//           count is {count}
-//         </button>
-//         <p>
-//           Edit <code>src/App.jsx</code> and save to test HMR
-//         </p>
-//       </div>
-//       <p className="read-the-docs">
-//         Click on the Vite and React logos to learn more
-//       </p>
-//     </>
-//   )
-// }
-
-// export default App
 import { ConfigProvider, Layout } from "antd";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
@@ -42,9 +7,12 @@ import Hero from "./components/Hero";
 import ProjectsSection from "./components/ProjectsSection";
 import SkillsSection from "./components/SkillsSection";
 import Topbar from "./components/Topbar";
-import { projects, skills } from "./content";
+import { SKILLS as skills } from "./constants";
 import ArtificialIntelligence from "./pages/ArtificialIntelligence";
+import Contact from "./pages/Contact";
+import Pacman from "./pages/pacman/Pacman";
 import Chat from "./components/Chat/Chat";
+import Home from "./pages/Home";
 
 const { Content } = Layout;
 
@@ -53,17 +21,16 @@ function App() {
     <ConfigProvider
       theme={{
         token: {
-          colorPrimary: "#7cb2ff",
-          colorBgContainer: "rgba(255,255,255,0.04)",
-          colorBgBase: "#060911",
-          colorTextBase: "#e8ecf7",
+          colorPrimary: "#0055ff",
+          colorBgContainer: "#ffffff",
+          colorBgBase: "#f9f9fc",
+          colorTextBase: "#1a1c1e",
           borderRadius: 12,
-          fontFamily:
-            "'Space Grotesk', 'Inter', system-ui, -apple-system, sans-serif",
+          fontFamily: "'Inter', system-ui, -apple-system, sans-serif",
         },
       }}
     >
-      <Layout className="page">
+      <Layout className="page" style={{ background: "var(--surface, #f9f9fc)" }}>
         <Topbar />
         <Content>
           <Routes>
@@ -72,13 +39,15 @@ function App() {
               element={
                 <>
                   <Hero />
-                  <ProjectsSection projects={projects} />
+                  {/* <ProjectsSection projects={projects} /> */}
                   <SkillsSection skills={skills} />
                   <ContactSection />
                 </>
               }
             />
-            <Route path="/ai" element={<ArtificialIntelligence />} />
+            {/* <Route path="/ai" element={<ArtificialIntelligence />} /> */}
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/pacman" element={<Pacman />} />
           </Routes>
         </Content>
         <Footer />
