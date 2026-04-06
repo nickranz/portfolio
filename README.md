@@ -1,5 +1,7 @@
 # Nick Ranz — Portfolio
 
+**Live site: [nranz.me](https://nranz.me)**
+
 Personal portfolio site built with React and Vite. Showcases my experience, skills, and projects as a full-stack software developer.
 
 ## Stack

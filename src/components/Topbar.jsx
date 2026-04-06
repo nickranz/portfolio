@@ -14,7 +14,7 @@ const Topbar = () => {
 
       <nav className="nav">
         <Link to="/" style={linkStyle("/")}>Home</Link>
-        <a href="/#skills">Skills</a>
+        <a href="#skills" onClick={(e) => { e.preventDefault(); document.getElementById('skills')?.scrollIntoView({ behavior: 'smooth' }); }}>Skills</a>
         {/* <Link to="/ai" style={linkStyle("/ai")}>AI</Link> */}
         <Link to="/contact" style={linkStyle("/contact")}>Contact</Link>
         <Link to="/pacman" style={linkStyle("/pacman")}>Pac-Man</Link>
