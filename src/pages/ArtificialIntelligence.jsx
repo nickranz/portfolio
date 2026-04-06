@@ -1,7 +1,3 @@
-import { Card, Col, Row, Space, Typography, Tag } from "antd";
-
-const { Title, Paragraph } = Typography;
-
 const aiHighlights = [
   {
     title: "Product co-pilots",
@@ -21,73 +17,69 @@ const aiHighlights = [
 ];
 
 const ArtificialIntelligence = () => (
-  <section className="section">
-    <div className="section-header">
-      <div>
-        <div className="eyebrow">Practice area</div>
-        <Title level={2}>Artificial Intelligence</Title>
+  <section className="section" id="ai">
+    <div className="section-inner">
+      <div className="section-header">
+        <div>
+          <div className="eyebrow">Practice area</div>
+          <h2>Artificial Intelligence</h2>
+        </div>
+        <p className="section-copy">
+          Exploring how AI elevates product value through trustworthy assistants, explainable outputs, and clear UX patterns.
+        </p>
       </div>
-      <Paragraph className="section-copy">
-        Exploring how AI elevates product value through trustworthy assistants, explainable outputs, and clear UX patterns.
-      </Paragraph>
-    </div>
 
-    <Card className="card" bordered>
-      <Space direction="vertical" size="large" style={{ width: "100%" }}>
+      <div style={{ display: "flex", flexDirection: "column", gap: "3.5rem" }}>
         <div>
-          <Title level={3}>Approach</Title>
-          <Paragraph className="card-body">
+          <h3>Approach</h3>
+          <p className="card-body" style={{ marginTop: "0.75rem" }}>
             I focus on pairing strong UX with reliable AI behavior: setting expectations, clarifying confidence, and giving users control. Prototyping quickly and measuring quality keeps features honest.
-          </Paragraph>
+          </p>
         </div>
 
         <div>
-          <Title level={3}>Highlights</Title>
-          <Row gutter={[12, 12]}>
+          <h3>Highlights</h3>
+          <div className="grid" style={{ marginTop: "1.5rem" }}>
             {aiHighlights.map((item) => (
-              <Col xs={24} sm={12} md={8} key={item.title}>
-                <Card className="card" bordered>
-                  <Title level={4}>{item.title}</Title>
-                  <Paragraph className="card-body">{item.description}</Paragraph>
-                  <Space wrap>
-                    {item.tags.map((tag) => (
-                      <Tag key={tag} color="green" className="chip">
-                        {tag}
-                      </Tag>
-                    ))}
-                  </Space>
-                </Card>
-              </Col>
+              <div key={item.title} className="card">
+                <h3 style={{ marginBottom: "0.5rem" }}>{item.title}</h3>
+                <p className="card-body">{item.description}</p>
+                <div className="chip-row">
+                  {item.tags.map((tag) => (
+                    <span key={tag} className="chip">{tag}</span>
+                  ))}
+                </div>
+              </div>
             ))}
-          </Row>
+          </div>
         </div>
 
         <div>
-          <Title level={3}>What I bring</Title>
-          <Paragraph className="card-body">
-            - Mapping user intents to AI capabilities
-            <br />- Prompt and response design with safety in mind
-            <br />- Prototyping with real data to validate usefulness
-            <br />- Clear success metrics and evaluation loops
-          </Paragraph>
+          <h3>What I bring</h3>
+          <div className="technical-snippet" style={{ marginTop: "1rem" }}>
+            — Mapping user intents to AI capabilities<br />
+            — Prompt and response design with safety in mind<br />
+            — Prototyping with real data to validate usefulness<br />
+            — Clear success metrics and evaluation loops
+          </div>
         </div>
 
-        <Card className="contact-card" bordered={false}>
-          <Title level={3}>Have an AI idea to explore?</Title>
-          <Paragraph className="section-copy">
+        <div className="contact-card">
+          <h3>Have an AI idea to explore?</h3>
+          <p className="section-copy" style={{ margin: "0.75rem 0 1.5rem" }}>
             Let&apos;s pair up to design a pilot, validate it with users, and ship with confidence.
-          </Paragraph>
-          <Space>
+          </p>
+          <div className="cta-row">
             <a className="primary-button" href="mailto:nicolasranz@gmail.com">
               Email me
             </a>
             <a className="ghost-button" href="/">
               Back to home
             </a>
-          </Space>
-        </Card>
-      </Space>
-    </Card>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 );
 

@@ -1,0 +1,146 @@
+/* ─── Experience Timeline ─────────────────────────── */
+
+.exp-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.exp-entry {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  gap: 20px;
+  padding-bottom: 56px;
+}
+
+.exp-entry:last-child {
+  padding-bottom: 0;
+}
+
+/* Timeline spine */
+.exp-marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5px;
+}
+
+.exp-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--surface-high);
+  flex-shrink: 0;
+}
+
+.exp-dot--current {
+  background: var(--primary);
+}
+
+.exp-line {
+  flex: 1;
+  width: 1px;
+  background: var(--surface-high);
+  margin-top: 6px;
+}
+
+.exp-entry:last-child .exp-line {
+  display: none;
+}
+
+/* Content area */
+.exp-content {
+  padding-top: 2px;
+}
+
+.exp-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 14px;
+}
+
+.exp-title-group {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.exp-title {
+  font-family: "Manrope", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--on-surface);
+}
+
+.exp-employer {
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--primary);
+}
+
+.exp-location {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 11px;
+  color: var(--on-surface-variant);
+  letter-spacing: 0.04em;
+}
+
+.exp-date {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 11px;
+  color: var(--on-surface-variant);
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  padding-top: 2px;
+}
+
+/* Description */
+.exp-body {
+  font-family: "Inter", sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: var(--on-surface-variant);
+  margin: 0 0 16px;
+}
+
+.exp-bullets {
+  font-family: "Inter", sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: var(--on-surface-variant);
+  margin: 0 0 16px;
+  padding-left: 18px;
+}
+
+.exp-bullets li {
+  margin-bottom: 6px;
+}
+
+.exp-bullets li:last-child {
+  margin-bottom: 0;
+}
+
+/* Technical highlight block */
+.exp-technical {
+  margin-bottom: 16px;
+}
+
+/* Chips inside experience */
+.exp-chips {
+  margin-top: 4px;
+}
+
+/* ─── Responsive ──────────────────────────────────── */
+@media (max-width: 640px) {
+  .exp-header {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .exp-date {
+    order: -1;
+  }
+}

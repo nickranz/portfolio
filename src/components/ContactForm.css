@@ -1,0 +1,151 @@
+/* ─── Contact Form Card ───────────────────────────── */
+
+.contact-form-card {
+  background: var(--surface-lowest);
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 12px 40px rgba(26, 28, 30, 0.06);
+}
+
+.contact-form-card-header {
+  margin-bottom: 36px;
+}
+
+.contact-form-title {
+  font-family: "Manrope", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--on-surface);
+  margin: 0 0 8px;
+}
+
+.contact-form-subtitle {
+  font-family: "Inter", sans-serif;
+  font-size: 0.9375rem;
+  color: var(--on-surface-variant);
+  margin: 0;
+}
+
+/* ─── Form layout ─────────────────────────────────── */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* Side-by-side name + email */
+.contact-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.contact-form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ─── Labels ──────────────────────────────────────── */
+
+.contact-form-label {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--on-surface-variant);
+  margin-bottom: 8px;
+}
+
+/* ─── Inputs & Textarea ───────────────────────────── */
+
+.contact-form-input {
+  width: 100%;
+  background: var(--surface-low);
+  border: none;
+  border-bottom: 2px solid var(--outline-variant);
+  border-radius: 8px 8px 0 0;
+  padding: 12px 8px;
+  font-family: "Inter", sans-serif;
+  font-size: 0.9375rem;
+  color: var(--on-surface);
+  outline: none;
+  transition: border-color 0.2s ease, background 0.2s ease;
+  box-sizing: border-box;
+  resize: none;
+}
+
+.contact-form-input::placeholder {
+  color: var(--outline);
+  font-size: 0.875rem;
+}
+
+.contact-form-input:focus {
+  border-bottom-color: var(--primary);
+  background: var(--surface-container);
+}
+
+.contact-form-textarea {
+  line-height: 1.65;
+}
+
+/* ─── Footer row ──────────────────────────────────── */
+
+.contact-form-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 8px;
+}
+
+.contact-form-security {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--outline);
+  margin: 0;
+}
+
+.contact-form-submit {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.contact-form-submit .material-symbols-outlined {
+  font-size: 18px;
+}
+
+/* ─── Confirmation ────────────────────────────────── */
+
+.contact-form-confirm {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 12px;
+  color: var(--on-surface-variant);
+  margin: 0;
+}
+
+/* ─── Responsive ──────────────────────────────────── */
+
+@media (max-width: 640px) {
+  .contact-form-card {
+    padding: 28px 20px;
+  }
+
+  .contact-form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form-footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .contact-form-submit {
+    justify-content: center;
+  }
+}

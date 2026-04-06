@@ -1,23 +1,17 @@
-const Footer = () => {
-  const handleBackToTop = (event) => {
-    event.preventDefault();
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+import { PERSONAL } from "../constants";
 
-  return (
-    <footer className="footer">
-      <span>© {new Date().getFullYear()} Nicolas Ranz</span>
+const Footer = () => (
+  <footer className="footer">
+    <div className="footer-inner">
+      <span>Â© {new Date().getFullYear()} {PERSONAL.name}</span>
       <div className="nav">
-        <a href="mailto:nicolasranz@hotmail.com">Email</a>
-        <a href="https://www.linkedin.com/in/nick-ranz/" target="_blank" rel="noreferrer">
-          LinkedIn
-        </a>
-        <a href="#top" onClick={handleBackToTop}>
-          Back to top
-        </a>
+        <a href={`mailto:${PERSONAL.email}`}>Email</a>
+        <a href={PERSONAL.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href={PERSONAL.github} target="_blank" rel="noreferrer">GitHub</a>
+        <a href="#home">Back to top</a>
       </div>
-    </footer>
-  );
-};
+    </div>
+  </footer>
+);
 
 export default Footer;
