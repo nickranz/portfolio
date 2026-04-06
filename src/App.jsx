@@ -12,7 +12,6 @@ import ArtificialIntelligence from "./pages/ArtificialIntelligence";
 import Contact from "./pages/Contact";
 import Pacman from "./pages/pacman/Pacman";
 import Chat from "./components/Chat/Chat";
-import Pacman from "./pages/pacman/Pacman";
 import Home from "./pages/Home";
 
 const { Content } = Layout;
