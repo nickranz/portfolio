@@ -123,6 +123,27 @@
   margin-bottom: 0;
 }
 
+/* Sub-projects */
+.exp-projects {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 16px;
+}
+
+.exp-project {
+  border-left: 2px solid var(--surface-high);
+  padding-left: 16px;
+}
+
+.exp-project-name {
+  font-family: "Manrope", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--on-surface);
+  margin: 0 0 8px;
+}
+
 /* Technical highlight block */
 .exp-technical {
   margin-bottom: 16px;
