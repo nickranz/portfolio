@@ -56,8 +56,8 @@ export const EXPERIENCES = [
       "Developed 10+ serverless backend features using Node.js on AWS Lambda, API Gateway, Cognito, and PostgreSQL, contributing to a fully AWS-hosted architecture.",
       "Worked within a 6-person Agile team on 2-week sprint cycles, consistently delivering features on schedule.",
     ],
-    technicalHighlight:
-      "Serverless healthcare LIS/CRM platform built on AWS Lambda, API Gateway, Cognito, and PostgreSQL.",
+    // technicalHighlight:
+    //   "Serverless healthcare LIS/CRM platform built on AWS Lambda, API Gateway, Cognito, and PostgreSQL.",
     stack: [
       "React",
       "Node.js",
@@ -74,15 +74,45 @@ export const EXPERIENCES = [
     startDate: "Aug 2024",
     endDate: "Jun 2025",
     location: "Reston, Virginia",
-    description: [
-      "Built an automated contract-intake system replacing manual monitoring of SAM.gov and GSA eBuy, processing ~100 government contract opportunities per week and eliminating ~8 hours of daily manual intake work across a 3–4 person proposal team.",
-      "Used Selenium to extract contract data, stored structured data in MongoDB, and built a service to detect new/updated records and generate cards in Infinity (3rd-party PM tool).",
-      "Architected the solution with 6–10 Flask microservices and a lightweight queue-based synchronization system; deployed to Kubernetes across Dev/Stage/Prod with CI/CD via GitHub Actions and ArgoCD.",
-      "Built reusable starter framework with Remix, React, and Angular — each including a USWDS-compliant landing page, OAuth2.0 via Keycloak (BFF architecture), multi-step forms, and CI/CD pipelines to Azure and AWS.",
-      "Built a full stack Employee Management app using Angular, .NET, and Microsoft Graph API with Entra ID auth, RBAC, and autocomplete UI — led transition from PoC to internally adopted application.",
+    description:
+      "Contributed to multiple R&D and internal tooling projects supporting federal clients, spanning full-stack development and DevOps.",
+    projects: [
+      {
+        name: "Contract Capture & Processing App",
+        blurb:
+          "Built an automated contract-intake system replacing manual monitoring of SAM.gov and GSA eBuy, processing ~100 government contract opportunities per week and eliminating ~8 hours of daily manual intake work across a 3–4 person proposal team.",
+        bullets: [
+          "Used Selenium to extract contract data and stored structured data in MongoDB.",
+          "Built service to detect new/updated records and generate corresponding cards in Infinity (3rd-party PM tool).",
+          "Implemented 2FA-enabled login automation via business email for authenticated scraping.",
+          "Architected the solution with 6–10 Flask microservices and a lightweight queue-based synchronization system for contract ingestion and downstream processing.",
+          "Deployed to Kubernetes across Dev/Stage/Prod environments, with automated CI/CD pipelines using GitHub Actions and ArgoCD.",
+          "Enabled end-to-end observability with Loki + Grafana for log monitoring and system health tracking.",
+        ],
+      },
+      {
+        name: "Starter Stack Template Project",
+        blurb:
+          "Built a reusable starter framework to rapidly prototype full-stack federal applications across multiple tech stacks, enabling faster turnaround for client-specific proof-of-concept (PoC) requests.",
+        bullets: [
+          "Built consistent frontends with Remix, React, and Angular — each including a USWDS-compliant landing page, login/logout flow, multi-step expense submission form, and review page.",
+          "Integrated OAuth2.0 authentication with Keycloak across multiple frontends, migrating from Implicit Flow to a secure Backend-for-Frontend (BFF) architecture.",
+          "Added and configured code styling/linting tools (ESLint, Prettier, xUnit) and documented developer usage.",
+          "Contributed to Spring Boot and .NET Core backend development.",
+          "Supported CI/CD workflows using GitHub Actions, deploying to Azure and AWS, and publishing code coverage reports to GitHub Pages.",
+        ],
+      },
+      {
+        name: "Internal Employee Management System",
+        bullets: [
+          "Built a full stack app using Angular, .NET, and Microsoft Graph API for managing employee data and access.",
+          "Integrated Microsoft Entra ID (Azure AD) for authentication and delegated permissions.",
+          "Implemented role-based access control (RBAC) and autocomplete UI components to streamline data entry.",
+          "Led transition from proof-of-concept to internally adopted application.",
+        ],
+      },
     ],
-    technicalHighlight:
-      "Enabled end-to-end observability with Loki + Grafana for log monitoring and system health tracking across microservices.",
+
     stack: [
       "React",
       "Angular",

@@ -1,18 +1,55 @@
-# React + Vite
+# Nick Ranz — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio site built with React and Vite. Showcases my experience, skills, and projects as a full-stack software developer.
 
-Currently, two official plugins are available:
+## Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React** + **Vite**
+- **React Router** — client-side routing
+- **Ant Design** — UI component library
+- **CSS** — custom design system (no Tailwind), following a "No-Line" tonal layering philosophy
 
-## React Compiler
+## Features
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- Hero section with headshot, years of experience, and intro
+- Experience timeline with support for multi-project roles (e.g. FedTec)
+- Skills matrix broken down by category (Languages, Frameworks, Cloud/DevOps, etc.)
+- Contact page with information registry and message form
+- Contact modal accessible from the hero section
+- Resume viewer modal with PDF preview and download
+- Pac-Man easter egg
 
-Note: This will impact Vite dev & build performances.
+## Project Structure
 
-## Expanding the ESLint configuration
+```
+src/
+├── assets/          # Static files (headshot, resume PDF)
+├── components/      # Reusable UI components
+├── pages/           # Route-level page components
+├── constants.js     # All content data (experience, skills, contact links, projects)
+└── App.jsx          # Root layout and routes
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Content Updates
+
+All personal data lives in `src/constants.js`. To update experience, skills, contact info, or projects — edit that file only.
+
+## Built With AI
+
+This project was designed and developed with the assistance of:
+
+- **[Claude Code](https://claude.ai/code)** (Anthropic) — AI coding assistant used throughout development for component building, refactoring, and architecture decisions
+- **[Google Stitch](https://stitch.withgoogle.com)** — Used for UI/UX design mockups and design system generation
+
+## Getting Started
+
+```bash
+npm install
+npm run dev
+```
+
+## Build
+
+```bash
+npm run build
+```
