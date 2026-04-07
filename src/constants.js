@@ -2,7 +2,7 @@
 
 export const PERSONAL = {
   name: "Nicolas Ranz",
-  email: "nranz@hotmail.com",
+  email: "nranz1410@hotmail.com",
   phone: "(571) 330-3426",
   linkedin: "https://www.linkedin.com/in/nick-ranz/",
   github: "https://github.com/nickranz",
@@ -85,7 +85,7 @@ export const EXPERIENCES = [
           "Used Selenium to extract contract data and stored structured data in MongoDB.",
           "Built service to detect new/updated records and generate corresponding cards in Infinity (3rd-party PM tool).",
           "Implemented 2FA-enabled login automation via business email for authenticated scraping.",
-          "Architected the solution with 6–10 Flask microservices and a lightweight queue-based synchronization system for contract ingestion and downstream processing.",
+          "Architected the solution with 6-10 Flask microservices and a lightweight queue-based synchronization system for contract ingestion and downstream processing.",
           "Deployed to Kubernetes across Dev/Stage/Prod environments, with automated CI/CD pipelines using GitHub Actions and ArgoCD.",
           "Enabled end-to-end observability with Loki + Grafana for log monitoring and system health tracking.",
         ],

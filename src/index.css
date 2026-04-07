@@ -20,6 +20,15 @@
   color-scheme: light;
 }
 
+[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+[data-theme="dark"] body {
+  background: #121416;
+  color: #e2e2e5;
+}
+
 * {
   box-sizing: border-box;
 }
